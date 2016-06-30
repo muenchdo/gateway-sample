@@ -1,0 +1,23 @@
+zuul:
+  routes:
+    ui:
+      path: /ui/**
+      url: http://localhost:8081
+    resource:
+      path: /api/**
+      url: http://localhost:9000
+
+security:
+  oauth2:
+    client:
+      client-id: 4b19e4ab39be8ab919fa
+      client-secret: 61e2eea410736a1dab394cc6c4b00eb15a47e810
+      access-token-uri: https://github.com/login/oauth/access_token
+      user-authorization-uri: https://github.com/login/oauth/authorize
+      client-authentication-scheme: form
+    resource:
+      user-info-uri: https://api.github.com/user
+
+logging:
+  level:
+    org.springframework.security: DEBUG

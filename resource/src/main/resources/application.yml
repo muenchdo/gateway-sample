@@ -1,0 +1,7 @@
+server:
+  port: 9000
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: https://api.github.com/user

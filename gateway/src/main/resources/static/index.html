@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <title>Gateway</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body ng-app="gateway" ng-cloak>
+<div ng-controller="gatewayController as gateway">
+    <div ng-switch on="gateway.authenticated">
+        <div ng-switch-when="false">
+            <button ng-click="gateway.login()">Sign in with Github</button>
+        </div>
+        <div ng-switch-when="true">
+            <p>
+                <a href="/ui">Go to UI...</a>
+            </p>
+            <button ng-click="gateway.logout()">Sign out {{gateway.user.name}}</button>
+        </div>
+    </div>
+</div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

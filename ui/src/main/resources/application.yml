@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: https://api.github.com/user
+
+logging:
+  level:
+    org.springframework.security: DEBUG

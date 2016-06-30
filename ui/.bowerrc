@@ -1,0 +1,6 @@
+{
+  "directory": "src/main/resources/static/bower_components",
+  "ignoredDependencies": [
+    "jquery"
+  ]
+}
